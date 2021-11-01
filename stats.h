@@ -9,32 +9,111 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h 
+ * @brief Analizing an array of unsigned char
  *
- * <Add Extended Description Here>
+ * Element Analiticts:
+ * 1. Maximum.
+ * 2. Minimum.
+ * 3. Mean.
+ * 4. Median.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Ran Malach
+ * @date 31/10/2021
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+void print_array(const unsigned char *, const unsigned int );
+/*    Given an array of data and a length, 
+        prints the array to the screen   */
 
+void print_statistics(  const unsigned char *, const unsigned int);
+/*   A function that prints the statistics of an array 
+    including minimum, maximum, mean, and median.   */
+
+void sort_array(unsigned char *, unsigned int);
+/*  Given an array of data and a length, 
+    sorts the array from largest to smallest.  
+    (The zeroth Element should be the largest 
+    value, and the last element (n-1) should 
+    be the smallest value. )               
+    
+    Divied & concur algorithm 
+    Complexity O(nlogn)
+    Space O(1)
+
+    * @param Pointer to the array.
+    * @param SIZE of the array.
+    * 
+    * @return void
+    */
+
+const unsigned char find_maximum(const unsigned char* const 
+                                   , const unsigned int);
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find maximum element of an array
  *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * Traverse all elements in the array,
+ * Find it's maximun value.
+ * Complexity O(n)
+ * Space O(1)
+ * 
+ * @param Pointer to the array.
+ * @param SIZE of the array.
+ * 
+ * @return unsigned char - max element.
  */
 
+const unsigned char find_minimum(const unsigned char* const
+                                    , const unsigned int);
+/**
+ * @brief Find minimum element of an array
+ *
+ * Traverse all elements in the array,
+ * Find it's minimum value.
+ * Complexity O(n)
+ * Space O(1)
+ *
+ * @param Pointer to the array.
+ * @param SIZE of the array 
+ * 
+ * @return unsigned char - min element.
+ */
 
+const unsigned char find_mean(const unsigned char* const
+                                , const unsigned int);
+/**
+ * @brief Find the mean value of an array
+ *
+ * Traverse and sum all elements in the array,
+ * Divide the sum to the array's size.
+ * Complexity O(n)
+ * Space O(1)
+ * 
+ * 
+ * @param Pointer to the array.
+ * @param SIZE of the array
+ * 
+ * @return unsigned char - Mean value.
+ */
+
+const unsigned char find_median(const unsigned char* const
+                                            , const unsigned int);
+/**
+ * @brief Find meadian value of an array
+ *
+ * Copy the array,
+ * Sort the copied array.
+ * Complexity O(nlogn)
+ * Space O(n)
+ * 
+ * @param Pointer to the array.
+ * @param SIZE of the array
+ * 
+ * @return unsigned char - element in middle position (case odd SIZE).
+ *               Average of two middle position elements
+ *                  (Even SIZE).
+ */
 #endif /* __STATS_H__ */

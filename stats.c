@@ -9,13 +9,17 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Analizing an array of unsigned char
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+Element Analiticts:
+ * 1. Maximum.
+ * 2. Minimum.
+ * 3. Mean.
+ * 4. Median.
+ * 
+ * @author Ran Malach
+ * @date 31/10/2021
  *
  */
 
@@ -35,9 +39,42 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+}
 
+/* Statistics and Printing Functions Go Here */
+
+void print_array(const unsigned char * A
+                  , const unsigned int N){
+}
+
+void print_statistics( const unsigned char *A
+                        , const unsigned int N){
+}
+
+const unsigned char find_maximum(const unsigned char* A
+                                            , const unsigned int N ){
+}
+
+const unsigned char find_minimum(const unsigned char* A
+                                            , const unsigned int N ){
+}
+
+const unsigned char find_mean(const unsigned char* A
+                                      , const unsigned int N ){
+}
+
+
+const unsigned char find_median(const unsigned char* A
+                                        , const unsigned int N ){
 }
 
 /* Add other Implementation File Code Here */
+
+
+void swap(unsigned char* a, unsigned char* b){
+}
+
+void sort_array(unsigned char* A, unsigned int N){
+}
+
+
