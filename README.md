@@ -1,5 +1,4 @@
 */ 
-Coursera-Introduction-to-Embedded-Systems
 This is my course in 
 "Introduction to Embedded Systems Software and Development Environments" 
 by University of Colorado Boulder. 
